@@ -3,162 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nancy Wamaitha Njenga | MCA Wanjohi Ward Campaign Hub & Presentation</title>
+  <title>Nancy Wamaitha Njenga | MCA Wanjohi Ward — Campaign Presentation & Strategy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #1b5e20;
-      --primary-light: #2e7d32;
-      --primary-dark: #0e3d12;
-      --accent: #f9a825;
-      --accent-light: #fbc02d;
-      --accent-dark: #c17900;
-      --dark: #121814;
-      --card-bg: #1e2620;
-      --text: #e8f0e9;
-      --text-muted: #9eaf9f;
-      --border: #2e3b30;
-      --danger: #d32f2f;
-      --success: #388e3c;
+      --forest: #0d2918;
+      --forest-deep: #07190e;
+      --forest-light: #184226;
+      --clay: #a85d26;
+      --clay-warm: #c67131;
+      --clay-light: #f4e9de;
+      --gold: #d4a017;
+      --cream: #faf8f5;
+      --card-bg: #122417;
+      --card-border: #1e3c28;
+      --text: #f0f4f1;
+      --text-muted: #a3b8aa;
+      --text-dark: #1f2a22;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
     }
 
     body {
-      background: var(--dark);
+      background-color: var(--forest-deep);
       color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* TOP NAVBAR */
+    h1, h2, h3, .serif-font {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .brand-font {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 1.5px;
+    }
+
+    /* TOP BAR */
     header {
-      background: rgba(18, 24, 20, 0.95);
-      border-bottom: 1px solid var(--border);
+      background: rgba(7, 25, 14, 0.96);
+      border-bottom: 1px solid var(--card-border);
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(10px);
-      padding: 0.75rem 1.5rem;
+      backdrop-filter: blur(12px);
+      padding: 0.85rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .brand {
+    .candidate-identity {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 1rem;
     }
 
-    .badge-icon {
-      background: linear-gradient(135deg, var(--accent), var(--primary-light));
-      color: #000;
-      font-weight: 900;
-      font-size: 1.25rem;
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
+    .initials-crest {
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid var(--clay-warm);
+      background: radial-gradient(circle, #1a4228 0%, #07190e 100%);
+      color: var(--gold);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(249, 168, 37, 0.3);
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(198, 113, 49, 0.2);
     }
 
-    .brand-title {
+    .candidate-name {
       font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: 0.5px;
+      font-weight: 700;
       color: #fff;
+      letter-spacing: 0.5px;
     }
 
-    .brand-subtitle {
-      font-size: 0.8rem;
-      color: var(--accent);
-      font-weight: 600;
+    .candidate-tagline {
+      font-size: 0.78rem;
+      color: var(--clay-warm);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
+      font-weight: 600;
     }
 
-    .nav-tabs {
+    .nav-pills {
       display: flex;
-      gap: 0.5rem;
-      background: #151b16;
-      padding: 0.25rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
+      gap: 0.4rem;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.3rem;
+      border-radius: 30px;
+      border: 1px solid var(--card-border);
     }
 
-    .tab-btn {
+    .pill-btn {
       background: transparent;
       border: none;
       color: var(--text-muted);
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
       cursor: pointer;
+      font-size: 0.82rem;
       font-weight: 600;
-      font-size: 0.85rem;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
+      transition: all 0.25s ease;
     }
 
-    .tab-btn:hover {
+    .pill-btn:hover {
       color: #fff;
-      background: rgba(255, 255, 255, 0.05);
     }
 
-    .tab-btn.active {
-      background: var(--primary-light);
+    .pill-btn.active {
+      background: var(--clay-warm);
       color: #fff;
-      box-shadow: 0 2px 8px rgba(46, 125, 50, 0.4);
+      box-shadow: 0 2px 10px rgba(198, 113, 49, 0.35);
     }
 
-    /* MAIN CONTAINER */
+    /* VIEW SECTIONS */
     main {
-      min-height: calc(100vh - 70px);
-    }
-
-    .view-section {
-      display: none;
-      padding: 1.5rem;
-      max-width: 1400px;
+      max-width: 1340px;
       margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
     }
 
-    .view-section.active {
+    .view-pane {
+      display: none;
+    }
+
+    .view-pane.active {
       display: block;
-      animation: fadeIn 0.3s ease-in-out;
+      animation: gentleFade 0.4s ease-out;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
+    @keyframes gentleFade {
+      from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ===================================================
-       1. PRESENTATION SLIDESHOW MODE
-       =================================================== */
-    .deck-container {
-      position: relative;
+    /* =========================================================
+       PRESENTATION DECK (AUTHENTIC, CLEAN, GROUNDED)
+       ========================================================= */
+    .deck-frame {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      min-height: 82vh;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+      position: relative;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-      overflow: hidden;
+      min-height: 78vh;
     }
 
     .slide {
       display: none;
-      padding: 3.5rem 4rem;
+      padding: 3.5rem 4.5rem;
       flex: 1;
       overflow-y: auto;
     }
@@ -167,240 +175,209 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      animation: slideIn 0.35s ease-out;
     }
 
-    @keyframes slideIn {
-      from { opacity: 0; transform: scale(0.98); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    .slide-badge {
-      display: inline-block;
-      background: rgba(249, 168, 37, 0.15);
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
+    .kicker {
       font-size: 0.8rem;
-      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-      align-self: flex-start;
-    }
-
-    .slide-title {
-      font-size: 2.8rem;
-      font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-      background: linear-gradient(120deg, #ffffff, #a5d6a7, var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .slide-subtitle {
-      font-size: 1.35rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      max-width: 900px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .slide-card {
-      background: #141c16;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .slide-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-    }
-
-    .slide-card h3 {
-      color: var(--accent);
-      font-size: 1.2rem;
-      margin-bottom: 0.75rem;
+      letter-spacing: 2px;
+      color: var(--clay-warm);
+      font-weight: 700;
+      margin-bottom: 0.8rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
 
-    .slide-card p {
-      color: #cfdbd0;
-      font-size: 0.95rem;
-      line-height: 1.5;
+    .kicker::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--clay-warm);
+      display: inline-block;
     }
 
-    .metric-hero {
-      display: flex;
-      align-items: baseline;
-      gap: 0.75rem;
-      margin-bottom: 0.5rem;
+    .headline {
+      font-size: 2.75rem;
+      color: #ffffff;
+      line-height: 1.18;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
     }
 
-    .metric-number {
-      font-size: 3.5rem;
-      font-weight: 900;
-      color: var(--accent);
-      line-height: 1;
-    }
-
-    .metric-label {
-      font-size: 1rem;
+    .sub-headline {
+      font-size: 1.2rem;
       color: var(--text-muted);
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+      max-width: 860px;
+      margin-bottom: 2rem;
+      font-weight: 400;
+      line-height: 1.6;
     }
 
-    /* DECK CONTROLS BAR */
-    .deck-controls {
-      background: #151c16;
-      border-top: 1px solid var(--border);
-      padding: 1rem 2rem;
+    /* CARDS & GRIDS */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .editorial-card {
+      background: rgba(7, 25, 14, 0.7);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .editorial-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--clay-warm);
+    }
+
+    .editorial-card h3 {
+      color: var(--gold);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .editorial-card p {
+      color: #d1ded4;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .quote-box {
+      border-left: 3px solid var(--clay-warm);
+      padding: 1rem 1.5rem;
+      background: rgba(198, 113, 49, 0.08);
+      border-radius: 0 8px 8px 0;
+      margin-top: 1rem;
+      font-style: italic;
+      color: #e5ece7;
+      font-size: 0.98rem;
+    }
+
+    /* DECK NAVIGATION CONTROLS */
+    .deck-nav-bar {
+      background: rgba(7, 25, 14, 0.95);
+      border-top: 1px solid var(--card-border);
+      padding: 1rem 2.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .deck-btn {
-      background: var(--primary-light);
+    .deck-action-btn {
+      background: var(--forest-light);
       color: #fff;
-      border: none;
+      border: 1px solid var(--card-border);
       padding: 0.65rem 1.4rem;
       border-radius: 8px;
       cursor: pointer;
-      font-weight: 700;
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      font-size: 0.88rem;
+      font-weight: 600;
       transition: all 0.2s;
     }
 
-    .deck-btn:hover:not(:disabled) {
-      background: var(--primary);
-      transform: translateY(-2px);
+    .deck-action-btn:hover:not(:disabled) {
+      background: var(--clay-warm);
+      border-color: var(--clay-warm);
     }
 
-    .deck-btn:disabled {
-      opacity: 0.35;
+    .deck-action-btn:disabled {
+      opacity: 0.3;
       cursor: not-allowed;
     }
 
-    .slide-counter {
-      font-weight: 700;
+    .slide-indicator {
+      font-size: 0.9rem;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-weight: 600;
     }
 
-    .slide-counter span {
-      color: var(--accent);
+    .slide-indicator span {
+      color: var(--gold);
+      font-weight: 700;
     }
 
-    /* ===================================================
-       2. POLLING CENTERS EXPLORER & ELECTORAL MATH
-       =================================================== */
-    .stats-row {
+    /* =========================================================
+       DATA & POLLING VIEW
+       ========================================================= */
+    .summary-tiles {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.25rem;
       margin-bottom: 2rem;
     }
 
-    .stat-card {
+    .summary-tile {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      position: relative;
-      overflow: hidden;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.35rem;
+      border-top: 3px solid var(--clay-warm);
     }
 
-    .stat-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--accent);
-    }
+    .summary-tile.green { border-top-color: #4caf50; }
+    .summary-tile.gold { border-top-color: var(--gold); }
+    .summary-tile.clay { border-top-color: var(--clay-warm); }
 
-    .stat-card.green::before { background: #4caf50; }
-    .stat-card.gold::before { background: var(--accent); }
-    .stat-card.blue::before { background: #2196f3; }
-    .stat-card.purple::before { background: #ab47bc; }
-
-    .stat-val {
-      font-size: 2rem;
-      font-weight: 800;
+    .summary-tile .val {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
       color: #fff;
-      margin-bottom: 0.25rem;
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
     }
 
-    .stat-title {
-      font-size: 0.8rem;
-      color: var(--text-muted);
+    .summary-tile .lbl {
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      color: var(--text-muted);
       font-weight: 600;
     }
 
-    .toolbar {
+    .filter-bar {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.5rem;
       background: var(--card-bg);
+      border: 1px solid var(--card-border);
       padding: 1rem 1.25rem;
       border-radius: 10px;
-      border: 1px solid var(--border);
+      margin-bottom: 1.5rem;
     }
 
-    .search-input {
-      background: #121814;
-      border: 1px solid var(--border);
+    .search-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--card-border);
       color: #fff;
       padding: 0.6rem 1rem;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 0.9rem;
       width: 280px;
       outline: none;
     }
 
-    .search-input:focus {
-      border-color: var(--accent);
+    .search-box:focus {
+      border-color: var(--clay-warm);
     }
 
-    .filter-group {
+    .btn-group {
       display: flex;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
 
-    .filter-btn {
-      background: #141b15;
-      border: 1px solid var(--border);
+    .filter-chip {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--card-border);
       color: var(--text-muted);
       padding: 0.45rem 0.9rem;
       border-radius: 6px;
@@ -409,16 +386,16 @@
       font-weight: 600;
     }
 
-    .filter-btn.active {
-      background: var(--primary-light);
-      color: #fff;
-      border-color: var(--primary-light);
+    .filter-chip.active {
+      background: var(--forest-light);
+      border-color: var(--gold);
+      color: var(--gold);
     }
 
-    .table-container {
+    .data-table-wrap {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
       overflow-x: auto;
     }
 
@@ -429,600 +406,564 @@
     }
 
     th {
-      background: #151d16;
+      background: rgba(7, 25, 14, 0.9);
       padding: 1rem;
-      font-size: 0.8rem;
-      color: var(--accent);
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-bottom: 1px solid var(--border);
+      letter-spacing: 1px;
+      color: var(--gold);
+      border-bottom: 1px solid var(--card-border);
     }
 
     td {
-      padding: 0.9rem 1rem;
-      border-bottom: 1px solid #253026;
-      font-size: 0.9rem;
+      padding: 0.95rem 1rem;
+      border-bottom: 1px solid #162f1e;
+      font-size: 0.92rem;
     }
 
     tr:hover td {
       background: rgba(255, 255, 255, 0.02);
     }
 
-    .tier-badge {
+    .badge-tier {
       display: inline-block;
       padding: 0.2rem 0.6rem;
       border-radius: 4px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    .tier-1 { background: rgba(249, 168, 37, 0.2); color: #fbc02d; border: 1px solid #fbc02d; }
-    .tier-2 { background: rgba(33, 150, 243, 0.2); color: #64b5f6; border: 1px solid #64b5f6; }
-    .tier-3 { background: rgba(158, 158, 158, 0.2); color: #bdbdbd; border: 1px solid #9e9e9e; }
+    .tier-1 { background: rgba(212, 160, 23, 0.15); color: var(--gold); border: 1px solid var(--gold); }
+    .tier-2 { background: rgba(198, 113, 49, 0.15); color: var(--clay-warm); border: 1px solid var(--clay-warm); }
+    .tier-3 { background: rgba(163, 184, 170, 0.15); color: var(--text-muted); border: 1px solid var(--text-muted); }
 
-    /* ===================================================
-       3. FRONT OFFICE 3-MONTH SPRINT TRACKER
-       =================================================== */
-    .sprint-grid {
+    /* =========================================================
+       FRONT OFFICE 90-DAY ROADMAP
+       ========================================================= */
+    .roadmap-cols {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 1.5rem;
     }
 
-    .sprint-col {
+    .roadmap-col {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.75rem;
     }
 
-    .sprint-header {
+    .col-header {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 1.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 1.25rem;
     }
 
-    .sprint-title {
+    .col-header h3 {
       font-size: 1.2rem;
-      font-weight: 800;
       color: #fff;
     }
 
-    .sprint-badge {
-      background: var(--primary-light);
-      color: #fff;
-      padding: 0.25rem 0.6rem;
+    .col-header .pill {
+      background: rgba(198, 113, 49, 0.15);
+      color: var(--clay-warm);
+      border: 1px solid var(--clay-warm);
+      padding: 0.2rem 0.6rem;
       border-radius: 12px;
       font-size: 0.75rem;
       font-weight: 700;
     }
 
-    .goal-item {
-      background: #141b15;
-      border: 1px solid #273428;
+    .task-card {
+      background: rgba(7, 25, 14, 0.7);
+      border: 1px solid var(--card-border);
       border-radius: 8px;
-      padding: 1rem;
+      padding: 1.1rem;
       margin-bottom: 1rem;
-      border-left: 3px solid var(--accent);
+      border-left: 3px solid var(--clay-warm);
     }
 
-    .goal-name {
+    .task-title {
       font-weight: 700;
       color: #fff;
-      margin-bottom: 0.3rem;
       font-size: 0.95rem;
+      margin-bottom: 0.35rem;
     }
 
-    .goal-desc {
-      font-size: 0.85rem;
+    .task-desc {
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
     }
 
-    .goal-kpi {
-      background: rgba(249, 168, 37, 0.1);
-      border: 1px dashed var(--accent);
-      padding: 0.4rem 0.6rem;
-      border-radius: 4px;
+    .task-kpi {
       font-size: 0.8rem;
-      color: var(--accent);
+      color: var(--gold);
       font-weight: 600;
+      background: rgba(212, 160, 23, 0.08);
+      padding: 0.35rem 0.6rem;
+      border-radius: 4px;
+      display: inline-block;
     }
 
-    /* FOOTER */
-    footer {
-      background: #0f1411;
-      border-top: 1px solid var(--border);
-      padding: 1.5rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .slide { padding: 2rem 1.5rem; }
-      .slide-title { font-size: 2rem; }
-      .deck-controls { padding: 0.75rem 1rem; }
-      header { flex-direction: column; gap: 0.75rem; }
+      .headline { font-size: 2rem; }
+      header { flex-direction: column; gap: 0.75rem; padding: 1rem; }
+      .deck-nav-bar { padding: 0.85rem 1rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP NAVIGATION HEADER -->
+  <!-- TOP HEADER -->
   <header>
-    <div class="brand">
-      <div class="badge-icon">W</div>
+    <div class="candidate-identity">
+      <div class="initials-crest">W</div>
       <div>
-        <div class="brand-title">NANCY WAMAITHA NJENGA</div>
-        <div class="brand-subtitle">MCA Wanjohi Ward | Kipipiri, Nyandarua</div>
+        <div class="candidate-name brand-font">NANCY WAMAITHA NJENGA</div>
+        <div class="candidate-tagline">Candidate for MCA • Wanjohi Ward • Kipipiri, Nyandarua</div>
       </div>
     </div>
 
-    <nav class="nav-tabs">
-      <button class="tab-btn active" onclick="switchView('presentation')">
-        📽️ Presentation Mode
-      </button>
-      <button class="tab-btn" onclick="switchView('elections')">
-        🗳️ Polling Data & Math
-      </button>
-      <button class="tab-btn" onclick="switchView('frontoffice')">
-        📋 Front Office 90-Day Plan
-      </button>
-    </nav>
+    <div class="nav-pills">
+      <button class="pill-btn active" onclick="navigate('deck')">Presentation Mode</button>
+      <button class="pill-btn" onclick="navigate('polling')">Electoral Centers (22)</button>
+      <button class="pill-btn" onclick="navigate('roadmap')">Front Office 90-Day Sprint</button>
+    </div>
   </header>
 
   <main>
-    <!-- ========================================================
-         VIEW 1: PRESENTATION SLIDESHOW MODE
-         ======================================================== -->
-    <section id="view-presentation" class="view-section active">
-      <div class="deck-container">
+
+    <!-- =========================================================
+         SECTION 1: THE PRESENTATION DECK
+         ========================================================= -->
+    <div id="pane-deck" class="view-pane active">
+      <div class="deck-frame">
         
-        <!-- SLIDE 1: COVER -->
+        <!-- SLIDE 1: BRAND IDENTITY -->
         <div class="slide active" data-slide="1">
-          <div class="slide-badge">Official Campaign Declaration</div>
-          <h1 class="slide-title">SIMAMA NA WAMAITHA:<br>MWĨHOKO WA WANJOHI</h1>
-          <p class="slide-subtitle">
-            An unstoppable grassroots movement for transformative leadership, economic dignity, and accountability in the Nyandarua County Assembly.
+          <div class="kicker">Grassroots Declaration</div>
+          <h1 class="headline">WAMAITHA: Born of the Soil, Tested by Time</h1>
+          <p class="sub-headline">
+            Nancy Wamaitha Njenga is not a cosmetic politician or an imported flagbearer. She is a patient organizer, a daughter of Wanjohi soil, and a battle-tested servant who knows what it feels like when the common citizen gets screwed by broken promises.
           </p>
-          <div class="grid-3">
-            <div class="slide-card">
-              <h3>🌾 Candidate</h3>
-              <p><strong>Nancy Wamaitha Njenga</strong><br>Daughter of the soil, grassroots organizer, and servant leader.</p>
+          <div class="cards-grid">
+            <div class="editorial-card">
+              <h3>🌱 Daughter of the Soil</h3>
+              <p>Her roots are planted in the red clay of Wanjohi. She knows the morning frost of the Aberdares, the cold potato trenches, and the quiet dignity of our hardworking mothers.</p>
             </div>
-            <div class="slide-card">
-              <h3>📍 Battlefield</h3>
-              <p><strong>Wanjohi Ward</strong><br>Kipipiri Constituency, Nyandarua County. 17,474 Registered Voters.</p>
+            <div class="editorial-card">
+              <h3>⏳ Patient & Grounded</h3>
+              <p>She did not arrive yesterday looking for quick headlines. She has sat in our church pews, walked with women in merry-go-rounds, and stood with families in their lowest moments.</p>
             </div>
-            <div class="slide-card">
-              <h3>🎯 Target</h3>
-              <p><strong>Victory by 6,200+ Votes</strong><br>Secured by grassroots mobilization, potato farmers, youth, and mothers.</p>
+            <div class="editorial-card">
+              <h3>⚔️ Shrewd & Street-Smart</h3>
+              <p>She has seen the system screw the farmer and sideline our youth. She cannot be sweet-talked, bribed, or intimidated by county assembly cartels in Ol Kalou.</p>
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 2: THE POWER OF "WAMAITHA" -->
+        <!-- SLIDE 2: THE ESSENCE OF THE NAME WAMAITHA -->
         <div class="slide" data-slide="2">
-          <div class="slide-badge">Brand Identity & Cultural Power</div>
-          <h1 class="slide-title">The Mighty Political Name:<br>"WAMAITHA"</h1>
-          <p class="slide-subtitle">
-            In Central Kenya politics, name recall and emotional resonance win grassroots elections. The name Wamaitha commands instant respect, courage, and motherly protection.
+          <div class="kicker">Cultural & Political Resonance</div>
+          <h1 class="headline">Why the Name "WAMAITHA" Strikes a Chord</h1>
+          <p class="sub-headline">
+            In Central Kenya politics, weak names fold under pressure. The name <em>Wamaitha</em> carries an ancient dignity—a woman who stands as a shield between her people and oppression.
           </p>
-          <div class="grid-3">
-            <div class="slide-card">
-              <h3>🛡️ 1. The Fearless Protector</h3>
-              <p>Historically, <em>Wamaitha</em> evokes unyielding resolve. A leader who will not compromise on Wanjohi’s development or flee when political headwinds blow.</p>
+          <div class="cards-grid">
+            <div class="editorial-card">
+              <h3>Mũkirĩrĩria (The Patient Servant)</h3>
+              <p>Leadership is not about rushing the stage; it is about staying the course when the road is muddy. Nancy Wamaitha has listened patiently before asking to be heard.</p>
             </div>
-            <div class="slide-card">
-              <h3>🤱 2. The Mother of the Ward</h3>
-              <p><em>Maitũ Wamaitha</em> connects directly to the kitchen, the farm, the school fees struggle, and the daily dignity of ordinary families.</p>
+            <div class="editorial-card">
+              <h3>Mũirĩtu wa Gĩcagi (Rooted Heritage)</h3>
+              <p>She does not need a Google Map to find Ndemi, Gatondo, or Rironi. She understands the pain of the tea cup without sugar and the school fee demand at daybreak.</p>
             </div>
-            <div class="slide-card">
-              <h3>⚡ 3. The Unifying Rally Cry</h3>
-              <p>A melodic, punchy brand easily chanted by boda boda riders, market women, and youth groups across all 22 polling centers.</p>
+            <div class="editorial-card">
+              <h3>Mũthuthia na Mũtetezi (The Unflinching Defender)</h3>
+              <p>When the potato broker brings an extended sack to cheat our mothers, Wamaitha stands up. When county roads budgets disappear, Wamaitha demands answers.</p>
             </div>
+          </div>
+          <div class="quote-box">
+            "We are not voting for a photo on a billboard. We are voting for a woman who has endured with us, suffered with us, and has the courage to fight with us."
           </div>
         </div>
 
         <!-- SLIDE 3: WANJOHI REALITIES & 5 CORE PILLARS -->
         <div class="slide" data-slide="3">
-          <div class="slide-badge">The Wanjohi Manifesto</div>
-          <h1 class="slide-title">Five Grassroots Pillars<br>for Wanjohi Ward</h1>
-          <p class="slide-subtitle">
-            Grounded in the cold mist of the Aberdares, tackling the daily pain of potato and dairy farmers.
+          <div class="kicker">The People's Charter</div>
+          <h1 class="headline">Ending the Raw Deal: Five Grassroots Pillars</h1>
+          <p class="sub-headline">
+            Nyandarua feeds Nairobi, yet Wanjohi's farmers remain financially strained. It is time to end this injustice with sharp, aggressive County Assembly oversight.
           </p>
-          <div class="grid-3">
-            <div class="slide-card">
-              <h3>🥔 1. Kilimo na Bei Bora</h3>
-              <p>Strict enforcement of the 50kg standardized potato bag rule; Ward potato aggregation hubs & cold storage.</p>
+          <div class="cards-grid">
+            <div class="editorial-card">
+              <h3>1. Stop the Potato Exploitation</h3>
+              <p>Strict enforcement of the 50kg standard bag. Establishment of ward-level potato aggregation stores and cold holding rooms to kill the broker cartel.</p>
             </div>
-            <div class="slide-card">
-              <h3>🚜 2. All-Weather Feeder Roads</h3>
-              <p>Aggressive County Assembly budget fighting for graveling and culverts on impassable farm-to-market feeder roads.</p>
+            <div class="editorial-card">
+              <h3>2. Farm-to-Market Feeder Roads</h3>
+              <p>Fighting on the floor of the County Assembly for heavy graveling, culverts, and bridges on feeder roads so milk and potatoes don't rot in the mud.</p>
             </div>
-            <div class="slide-card">
-              <h3>🎓 3. Fair & Transparent Bursaries</h3>
-              <p>100% public, automated vetting ensuring every single shilling reaches the child of the peasant and the widow.</p>
+            <div class="editorial-card">
+              <h3>3. Transparent, Public Bursaries</h3>
+              <p>Ending the shameful practice where bursaries are handed out as political favors. A published, community-vetted list where every needy child gets funds.</p>
             </div>
-            <div class="slide-card">
-              <h3>🏥 4. Afya Bora & Clean Water</h3>
-              <p>Consistently stocked local dispensaries with medicines and gravity-piped clean water from Aberdare sources.</p>
+            <div class="editorial-card">
+              <h3>4. Stocked Dispensaries & Clean Water</h3>
+              <p>Ending the excuse of "no medicine" in our local health centers, and tapping gravity water piping directly from Aberdare catchment sources.</p>
             </div>
-            <div class="slide-card">
-              <h3>🏍️ 5. Women & Youth Inclusion</h3>
-              <p>County revolving funds for chamas; lighted Boda Boda customer sheds; local youth access to county tenders.</p>
-            </div>
-            <div class="slide-card">
-              <h3>⚖️ 6. Assemblies Oversight</h3>
-              <p>Fearless defense of Wanjohi's rightful share in Ol Kalou. No more silent MCAs!</p>
+            <div class="editorial-card">
+              <h3>5. Dignity for Boda Boda & Youth</h3>
+              <p>Shaded, well-lit Boda Boda customer sheds, safety training, and reserving county maintenance contracts for local youth and women chamas.</p>
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 4: THE LAUNCH & FUNDRAISING DINNER -->
+        <!-- SLIDE 4: THE LAUNCH & FUNDRAISING COMMITMENT -->
         <div class="slide" data-slide="4">
-          <div class="slide-badge">Resource Mobilization</div>
-          <h1 class="slide-title">Campaign Launch Dinner:<br>Fueling the Seed Fund</h1>
-          <p class="slide-subtitle">
-            A people-funded candidate is an accountable candidate. Raising the starting war-chest for boots on the ground.
+          <div class="kicker">The War-Chest Strategy</div>
+          <h1 class="headline">A Campaign Funded by the People, Owned by the People</h1>
+          <p class="sub-headline">
+            When a candidate is funded by cartels, they serve the cartels. When Nancy Wamaitha is backed by her friends, professionals, and grassroots patrons, she answers ONLY to Wanjohi.
           </p>
-          <div class="grid-2">
-            <div class="slide-card">
-              <h3>💰 Contribution Tiers</h3>
-              <p>• <strong>Platinum Patron:</strong> KES 100,000 – 250,000 (VIP Table of 10)<br>
-                 • <strong>Kipipiri Gold Sponsor:</strong> KES 50,000 (Reserved Table)<br>
-                 • <strong>Wanjohi Silver Supporter:</strong> KES 20,000<br>
-                 • <strong>Bronze Delegate Seat:</strong> KES 5,000 – 10,000<br>
-                 • <strong>M-Pesa Diaspora Friends:</strong> KES 1,000+</p>
+          <div class="cards-grid">
+            <div class="editorial-card">
+              <h3>Aberdare Platinum Patrons</h3>
+              <p><strong>KES 100,000 – 250,000</strong><br>Founding trustees of the movement. Guiding strategy and fueling the logistical backbone (vehicles, sound, ward secretariat).</p>
             </div>
-            <div class="slide-card">
-              <h3>🎯 Operational Deployment of Funds</h3>
-              <p>• <strong>Phase 1:</strong> Sound equipment, branded vehicle, reflector jackets.<br>
-                 • <strong>Phase 2:</strong> Ward-wide leaflet drops, 22 village delegations.<br>
-                 • <strong>Phase 3:</strong> 70 Polling Station Agents training & election day defense.</p>
+            <div class="editorial-card">
+              <h3>Kipipiri Gold Sponsors</h3>
+              <p><strong>KES 50,000</strong><br>Underwriting grassroots town halls, youth tournaments, and village delegation sessions.</p>
+            </div>
+            <div class="editorial-card">
+              <h3>Wanjohi Silver Supporters</h3>
+              <p><strong>KES 20,000</strong><br>Sponsoring voter education materials, village flyers, and grassroots communication networks.</p>
+            </div>
+            <div class="editorial-card">
+              <h3>The 100-Bob Grassroots Club</h3>
+              <p><strong>KES 1,000 – 5,000+</strong><br>Smallholder farmers, boda riders, and diaspora Kipipiri professionals pitching in monthly via M-Pesa Paybill.</p>
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 5: THE ELECTORAL MATH -->
+        <!-- SLIDE 5: THE ELECTORAL MATHEMATICS -->
         <div class="slide" data-slide="5">
-          <div class="slide-badge">Electoral Intelligence</div>
-          <h1 class="slide-title">The Mathematics of Victory:<br>The "Magic Number"</h1>
-          <p class="slide-subtitle">
-            Wanjohi Ward voter census: 17,474 Registered Voters across 22 Polling Centers and 35 Polling Stations (Streams).
+          <div class="kicker">The Science of Winning</div>
+          <h1 class="headline">Wanjohi By the Numbers: The Path to 6,200 Votes</h1>
+          <p class="sub-headline">
+            Grassroots campaigns are won with cold precision. Here is the exact electoral census of Wanjohi Ward and the formula for decisive victory.
           </p>
-          <div class="grid-3">
-            <div class="slide-card">
-              <div class="metric-hero">
-                <div class="metric-number">17.4K</div>
-              </div>
-              <div class="metric-label">Registered Voters</div>
-              <p style="margin-top: 0.5rem;">Total registered electorate in Wanjohi Ward.</p>
+          <div class="cards-grid">
+            <div class="editorial-card">
+              <h3 style="font-size: 2.2rem; color: #fff; font-family: 'Playfair Display';">17,474</h3>
+              <p><strong>Total Registered Voters</strong><br>Spread across 22 Polling Centers and 35 Polling Stations (Streams).</p>
             </div>
-            <div class="slide-card">
-              <div class="metric-hero">
-                <div class="metric-number">13.1K</div>
-              </div>
-              <div class="metric-label">Expected Turnout (75%)</div>
-              <p style="margin-top: 0.5rem;">Projected votes cast on Election Day.</p>
+            <div class="editorial-card">
+              <h3 style="font-size: 2.2rem; color: #fff; font-family: 'Playfair Display';">~13,100</h3>
+              <p><strong>Projected Turnout (75%)</strong><br>Based on historical general election participation in Kipipiri Constituency.</p>
             </div>
-            <div class="slide-card" style="border-color: var(--accent);">
-              <div class="metric-hero">
-                <div class="metric-number">6,200</div>
-              </div>
-              <div class="metric-label" style="color: var(--accent);">Winning Target (Magic Number)</div>
-              <p style="margin-top: 0.5rem;">Securing ~48% of votes cast guarantees unassailable victory.</p>
+            <div class="editorial-card" style="border-color: var(--clay-warm);">
+              <h3 style="font-size: 2.2rem; color: var(--gold); font-family: 'Playfair Display';">6,200</h3>
+              <p><strong>The Magic Number to Win</strong><br>Securing ~48% of the valid votes puts Nancy Wamaitha out of reach of any rival.</p>
             </div>
+          </div>
+          <div class="quote-box">
+            "Concentrate force where the numbers live: The Top 6 Polling Centers command 50.5% of all registered voters in Wanjohi Ward."
           </div>
         </div>
 
-        <!-- SLIDE 6: THE TIER 1 MEGA 6 -->
+        <!-- SLIDE 6: THE MEGA 6 KINGMAKERS -->
         <div class="slide" data-slide="6">
-          <div class="slide-badge">Tactical Ground Dominance</div>
-          <h1 class="slide-title">The "Mega 6" Kingmakers:<br>50.5% of the Ward</h1>
-          <p class="slide-subtitle">
-            These 6 centers command 8,818 votes. Locking down these hubs wins the election.
+          <div class="kicker">Targeted Ground Mobilization</div>
+          <h1 class="headline">The "Mega 6" Centers: 8,818 Decisive Ballots</h1>
+          <p class="sub-headline">
+            Win these six centers, and you win Wanjohi Ward. The front office prioritizes delegations and voter contacts here.
           </p>
-          <div class="grid-3">
-            <div class="slide-card">
+          <div class="cards-grid">
+            <div class="editorial-card">
               <h3>1. Wanjohi Primary</h3>
-              <p><strong>2,325 Voters</strong> (4 Streams)<br>Front Office Win Target: <strong>1,200 votes</strong></p>
+              <p><strong>2,325 Voters</strong> (4 Streams)<br>Target: <strong>1,200 Votes</strong><br>Chief village commercial hub; heavy trader & youth focus.</p>
             </div>
-            <div class="slide-card">
-              <h3>2. Ng'arua-Rironi Pri</h3>
-              <p><strong>1,892 Voters</strong> (3 Streams)<br>Front Office Win Target: <strong>950 votes</strong></p>
+            <div class="editorial-card">
+              <h3>2. Ng'arua-Rironi Primary</h3>
+              <p><strong>1,892 Voters</strong> (3 Streams)<br>Target: <strong>950 Votes</strong><br>Major agricultural & dairy stronghold; women chamas crucial.</p>
             </div>
-            <div class="slide-card">
+            <div class="editorial-card">
               <h3>3. Ndemi Primary</h3>
-              <p><strong>1,361 Voters</strong> (2 Streams)<br>Front Office Win Target: <strong>650 votes</strong></p>
+              <p><strong>1,361 Voters</strong> (2 Streams)<br>Target: <strong>650 Votes</strong><br>Deep community cohesion; elder blessings and church roots.</p>
             </div>
-            <div class="slide-card">
+            <div class="editorial-card">
               <h3>4. Gatondo Primary</h3>
-              <p><strong>1,191 Voters</strong> (2 Streams)<br>Front Office Win Target: <strong>550 votes</strong></p>
+              <p><strong>1,191 Voters</strong> (2 Streams)<br>Target: <strong>550 Votes</strong><br>Youth and farming swing center; feeder road priority.</p>
             </div>
-            <div class="slide-card">
+            <div class="editorial-card">
               <h3>5. Magomano Primary</h3>
-              <p><strong>1,043 Voters</strong> (2 Streams)<br>Front Office Win Target: <strong>500 votes</strong></p>
+              <p><strong>1,043 Voters</strong> (2 Streams)<br>Target: <strong>500 Votes</strong><br>Active church congregations; transparent bursary messaging.</p>
             </div>
-            <div class="slide-card">
+            <div class="editorial-card">
               <h3>6. Gitei Primary</h3>
-              <p><strong>1,006 Voters</strong> (2 Streams)<br>Front Office Win Target: <strong>480 votes</strong></p>
+              <p><strong>1,006 Voters</strong> (2 Streams)<br>Target: <strong>480 Votes</strong><br>Potato belt; standard packaging enforcement resonance.</p>
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 7: FRONT OFFICE 3-MONTH SPRINT -->
+        <!-- SLIDE 7: FRONT OFFICE 90-DAY QUARTER -->
         <div class="slide" data-slide="7">
-          <div class="slide-badge">Operations & Execution</div>
-          <h1 class="slide-title">Front Office 90-Day Sprint:<br>Measurable Micro-Goals</h1>
-          <p class="slide-subtitle">
-            The Front Office is the campaign's command engine: converting cash, logging voters, and synchronizing ground movement.
+          <div class="kicker">Front Office Command</div>
+          <h1 class="headline">The 90-Day Front Office Engine</h1>
+          <p class="sub-headline">
+            The front office turns campaign energy into structured voter data, donor collections, and disciplined field logistics.
           </p>
-          <div class="grid-3">
-            <div class="slide-card">
-              <h3>🗓️ Month 1 (Setup)</h3>
-              <p>• Collect <strong>≥ 70%</strong> of dinner pledges in 21 days.<br>
-                 • 100% of walk-ins logged in Daily Register.<br>
-                 • Map 100 Ward key influencers.<br>
-                 • Daily 15-min debrief with Nancy Wamaitha.</p>
+          <div class="cards-grid">
+            <div class="editorial-card">
+              <h3>Month 1: Pledges & Capture</h3>
+              <p>• Collect <strong>≥ 70%</strong> of dinner pledges within 21 days.<br>
+                 • Institute 100% visitor logging at the front desk.<br>
+                 • Map 100 grassroots opinion shapers.<br>
+                 • 15-minute daily debrief with Nancy Wamaitha.</p>
             </div>
-            <div class="slide-card">
-              <h3>🚀 Month 2 (Infiltration)</h3>
-              <p>• Host <strong>3 mini-delegations/week</strong> at the office.<br>
-                 • Grow voter database to <strong>1,500 contacts</strong>.<br>
-                 • Distribute 500+ tracked Boda reflectors.<br>
-                 • Launch 100-Bob Monthly Grassroots Club.</p>
+            <div class="editorial-card">
+              <h3>Month 2: Infiltration & CRM</h3>
+              <p>• Host 3 structured village delegations per week.<br>
+                 • Build voter contact CRM to <strong>1,500 verified numbers</strong>.<br>
+                 • Distribute 500+ logged branded Boda reflector jackets.<br>
+                 • Launch the 100-Bob Monthly Club.</p>
             </div>
-            <div class="slide-card">
-              <h3>🏆 Month 3 (Dominance)</h3>
-              <p>• Hit <strong>3,000+ verified voter contacts</strong>.<br>
-                 • Vet 70 Polling Station Agents (2 per stream).<br>
+            <div class="editorial-card">
+              <h3>Month 3: Dominance & Protection</h3>
+              <p>• Expand database to <strong>3,000+ registered voters</strong>.<br>
+                 • Recruit & vet 70 polling station agents (2 per stream).<br>
                  • Send first segmented Ward Bulk SMS.<br>
-                 • Complete Q1 financial and operational audit.</p>
+                 • Complete Q1 financial audit and launch Q2 plan.</p>
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 8: THE AGENT DEFENSE GRID -->
+        <!-- SLIDE 8: THE 70-AGENT DEFENSE GRID -->
         <div class="slide" data-slide="8">
-          <div class="slide-badge">Polling Day Protection</div>
-          <h1 class="slide-title">The 70-Agent Defense Grid</h1>
-          <p class="slide-subtitle">
-            Elections are won at the polling stream and defended at the tally center.
+          <div class="kicker">Ballot Protection</div>
+          <h1 class="headline">Defending the Vote: The 70-Agent Grid</h1>
+          <p class="sub-headline">
+            A grassroots victory is meaningless if the ballot box is unprotected. Every stream will have trained, vigilant guardians.
           </p>
-          <div class="grid-2">
-            <div class="slide-card">
-              <h3>👥 The 2-Agent Rule per Stream</h3>
-              <p>Every single one of the <strong>35 polling streams</strong> in Wanjohi Ward will have 2 vetted agents:<br>
-                 1. <strong>Chief Polling Agent:</strong> Inside the room observing ballot issuance, stamping, counting, and signing Form 36A.<br>
-                 2. <strong>Mobilizing Agent:</strong> Outside the gate cross-referencing turnout lists and mobilizing supporters.</p>
+          <div class="cards-grid">
+            <div class="editorial-card">
+              <h3>The 2-Agent Rule per Stream</h3>
+              <p>Across all <strong>35 streams</strong> in Wanjohi's 22 centers, the campaign deploys two dedicated agents: one Chief Polling Agent inside the room tracking voter counts, and one Reliever/Mobilizer outside driving late-afternoon turnout.</p>
             </div>
-            <div class="slide-card">
-              <h3>📱 Digital Rapid Results Tally</h3>
-              <p>• Immediate photo transmission of Form 36A/34A from each stream to the Front Office command desk.<br>
-                 • Parallel tallying system completed within 2 hours of polls closing.<br>
-                 • Zero tolerance for vote tampering or unvouched results.</p>
+            <div class="editorial-card">
+              <h3>Gender & Youth Balance</h3>
+              <p>Every polling center will feature 1 female agent and 1 youth agent. They reflect Wamaitha's inclusive leadership and connect directly with local voters.</p>
+            </div>
+            <div class="editorial-card">
+              <h3>Rapid Photo Transmission</h3>
+              <p>Within minutes of vote tally completion, Form 36A/34A is photographed and relayed directly to the Front Office central tally desk for independent verification.</p>
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 9: RALLYING CALL -->
+        <!-- SLIDE 9: THE RALLYING CALL -->
         <div class="slide" data-slide="9">
-          <div class="slide-badge">Victory Call</div>
-          <h1 class="slide-title">Wanjohi Imara na Wamaitha!</h1>
-          <p class="slide-subtitle">
-            "We have made our decision. We are not turning back. We are moving forward with faith, with work, and with unity."
+          <div class="kicker">The Mandate</div>
+          <h1 class="headline">Wanjohi Imara na Wamaitha!</h1>
+          <p class="sub-headline">
+            "We have listened. We have waited. We have endured. Now, we rise together to claim what belongs to our families, our farms, and our children."
           </p>
-          <div style="margin-top: 2rem; background: #121814; border: 2px solid var(--accent); padding: 2rem; border-radius: 12px; text-align: center;">
-            <h2 style="color: var(--accent); font-size: 2rem; margin-bottom: 1rem;">SIMAMA NA WAMAITHA</h2>
-            <p style="font-size: 1.25rem; color: #fff;">Kazi • Haki • Maendeleo ya Wanjohi Ward</p>
-            <p style="color: var(--text-muted); margin-top: 1rem;">Candidate: <strong>Nancy Wamaitha Njenga</strong> | Kipipiri | Nyandarua</p>
+          <div style="background: rgba(7, 25, 14, 0.9); border: 2px solid var(--clay-warm); padding: 2.5rem; border-radius: 12px; text-align: center; margin-top: 1.5rem;">
+            <div class="brand-font" style="font-size: 2.2rem; color: var(--gold); margin-bottom: 0.5rem;">SIMAMA NA WAMAITHA</div>
+            <p style="font-size: 1.15rem; color: #fff; font-weight: 500;">Faith • Labor • Grassroots Justice</p>
+            <p style="color: var(--text-muted); margin-top: 1rem; font-size: 0.95rem;">
+              <strong>Nancy Wamaitha Njenga</strong> • Incoming MCA for Wanjohi Ward • Kipipiri Constituency
+            </p>
           </div>
         </div>
 
-        <!-- DECK CONTROLS -->
-        <div class="deck-controls">
-          <button class="deck-btn" id="prevBtn" onclick="changeSlide(-1)">
-            ⬅️ Previous
-          </button>
-          <div class="slide-counter">
-            Slide <span id="currentSlideNum">1</span> of <span id="totalSlidesNum">9</span>
-          </div>
-          <button class="deck-btn" id="nextBtn" onclick="changeSlide(1)">
-            Next ➡️
-          </button>
-        </div>
-
       </div>
-    </section>
 
-    <!-- ========================================================
-         VIEW 2: POLLING CENTERS EXPLORER & ELECTORAL MATH
-         ======================================================== -->
-    <section id="view-elections" class="view-section">
-      <div class="stats-row">
-        <div class="stat-card green">
-          <div class="stat-val">17,474</div>
-          <div class="stat-title">Registered Voters</div>
+      <!-- DECK BOTTOM BAR -->
+      <div class="deck-nav-bar">
+        <button class="deck-action-btn" id="prevBtn" onclick="moveSlide(-1)">← Previous</button>
+        <div class="slide-indicator">
+          Slide <span id="currentNum">1</span> of <span id="totalNum">9</span>
         </div>
-        <div class="stat-card gold">
-          <div class="stat-val">22</div>
-          <div class="stat-title">Polling Centers</div>
+        <button class="deck-action-btn" id="nextBtn" onclick="moveSlide(1)">Next →</button>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         SECTION 2: POLLING CENTERS EXPLORER
+         ========================================================= -->
+    <div id="pane-polling" class="view-pane">
+      
+      <div class="summary-tiles">
+        <div class="summary-tile green">
+          <div class="val">17,474</div>
+          <div class="lbl">Registered Voters</div>
         </div>
-        <div class="stat-card blue">
-          <div class="stat-val">35</div>
-          <div class="stat-title">Stations (Streams)</div>
+        <div class="summary-tile gold">
+          <div class="val">22</div>
+          <div class="lbl">Polling Centers</div>
         </div>
-        <div class="stat-card purple">
-          <div class="stat-val">6,200</div>
-          <div class="stat-title">Target Win Votes</div>
+        <div class="summary-tile clay">
+          <div class="val">35</div>
+          <div class="lbl">Polling Stations (Streams)</div>
+        </div>
+        <div class="summary-tile green">
+          <div class="val">6,200</div>
+          <div class="lbl">Winning Target (Votes)</div>
         </div>
       </div>
 
-      <div class="toolbar">
-        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search polling center or village..." oninput="filterTable()">
-        <div class="filter-group">
-          <button class="filter-btn active" onclick="setTierFilter('all')">All (22)</button>
-          <button class="filter-btn" onclick="setTierFilter('1')">Tier 1 Mega (6)</button>
-          <button class="filter-btn" onclick="setTierFilter('2')">Tier 2 Mid (6)</button>
-          <button class="filter-btn" onclick="setTierFilter('3')">Tier 3 Perimeter (10)</button>
+      <div class="filter-bar">
+        <input type="text" id="filterInput" class="search-box" placeholder="Search center name or village..." oninput="updateTable()">
+        <div class="btn-group">
+          <button class="filter-chip active" onclick="applyTierFilter('all')">All Centers (22)</button>
+          <button class="filter-chip" onclick="applyTierFilter('1')">Tier 1 Mega (6)</button>
+          <button class="filter-chip" onclick="applyTierFilter('2')">Tier 2 Mid (6)</button>
+          <button class="filter-chip" onclick="applyTierFilter('3')">Tier 3 Perimeter (10)</button>
         </div>
       </div>
 
-      <div class="table-container">
+      <div class="data-table-wrap">
         <table>
           <thead>
             <tr>
               <th>#</th>
               <th>Polling Center</th>
-              <th>Voters</th>
-              <th>% Ward</th>
+              <th>Registered Voters</th>
+              <th>Ward Share</th>
               <th>Streams</th>
               <th>Target Votes</th>
-              <th>Agents Needed</th>
-              <th>Strategic Tier</th>
+              <th>Agents Required</th>
+              <th>Tactical Tier</th>
             </tr>
           </thead>
           <tbody id="pollingTableBody">
-            <!-- Dynamically populated via JS -->
+            <!-- Rendered by JS -->
           </tbody>
         </table>
       </div>
-    </section>
 
-    <!-- ========================================================
-         VIEW 3: FRONT OFFICE 90-DAY SPRINT PLAN
-         ======================================================== -->
-    <section id="view-frontoffice" class="view-section">
-      <div class="stats-row">
-        <div class="stat-card gold">
-          <div class="stat-val">≥ 70%</div>
-          <div class="stat-title">Month 1 Pledge Conversion</div>
-        </div>
-        <div class="stat-card green">
-          <div class="stat-val">3,000+</div>
-          <div class="stat-title">Voter CRM Target</div>
-        </div>
-        <div class="stat-card blue">
-          <div class="stat-val">70</div>
-          <div class="stat-title">Vetted Polling Agents</div>
-        </div>
-        <div class="stat-card purple">
-          <div class="stat-val">22</div>
-          <div class="stat-title">Village Delegations</div>
-        </div>
-      </div>
+    </div>
 
-      <div class="sprint-grid">
+    <!-- =========================================================
+         SECTION 3: FRONT OFFICE 90-DAY SPRINT ROADMAP
+         ========================================================= -->
+    <div id="pane-roadmap" class="view-pane">
+      <div class="roadmap-cols">
+        
         <!-- MONTH 1 -->
-        <div class="sprint-col">
-          <div class="sprint-header">
-            <div class="sprint-title">Month 1 (Days 1–30)</div>
-            <div class="sprint-badge">Setup & Pledges</div>
+        <div class="roadmap-col">
+          <div class="col-header">
+            <h3>Month 1: Days 1–30</h3>
+            <span class="pill">Setup & Pledges</span>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Dinner Pledge Conversion</div>
-            <div class="goal-desc">Personal follow-up of all launch dinner pledge cards within 72 hours with digital receipts.</div>
-            <div class="goal-kpi">KPI: ≥ 70% collected in 21 days</div>
+
+          <div class="task-card">
+            <div class="task-title">Launch Dinner Pledge Collection</div>
+            <div class="task-desc">Personal call and WhatsApp follow-up for every dinner pledge envelope with official digital receipting.</div>
+            <div class="task-kpi">KPI: ≥ 70% collected in 21 days</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Front Office Visitor Desk</div>
-            <div class="goal-desc">Set up daily constituent visitor registry. Log name, village, polling station, and issue.</div>
-            <div class="goal-kpi">KPI: 100% of visitors logged</div>
+
+          <div class="task-card">
+            <div class="task-title">Front Desk Constituent Registry</div>
+            <div class="task-desc">Institute the physical visitor logbook: Name, Village, Polling Station, Contact, and Core Grievance.</div>
+            <div class="task-kpi">KPI: 100% of walk-ins recorded</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Opinion Leader Directory</div>
-            <div class="goal-desc">Map pastors, chama chairladies, boda boda stage heads, and village elders.</div>
-            <div class="goal-kpi">KPI: 100 key contacts mapped</div>
+
+          <div class="task-card">
+            <div class="task-title">100 Ward Influencers Directory</div>
+            <div class="task-desc">Map pastors, chama chairladies, boda boda stage heads, and respected village elders across all sub-locations.</div>
+            <div class="task-kpi">KPI: 100 verified contacts mapped</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Candidate 7-Day Diary</div>
-            <div class="goal-desc">Manage Nancy's rolling calendar: churches Sundays, chamas mid-week, markets Saturdays.</div>
-            <div class="goal-kpi">KPI: Zero missed engagements</div>
+
+          <div class="task-card">
+            <div class="task-title">Candidate 7-Day Movement Diary</div>
+            <div class="task-desc">Manage Nancy Wamaitha's weekly calendar: Church Sundays, Chama mid-weeks, Market Saturdays.</div>
+            <div class="task-kpi">KPI: 0 missed diary events</div>
           </div>
         </div>
 
         <!-- MONTH 2 -->
-        <div class="sprint-col">
-          <div class="sprint-header">
-            <div class="sprint-title">Month 2 (Days 31–60)</div>
-            <div class="sprint-badge">Ground Penetration</div>
+        <div class="roadmap-col">
+          <div class="col-header">
+            <h3>Month 2: Days 31–60</h3>
+            <span class="pill">Ground Infiltration</span>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Weekly Village Delegations</div>
-            <div class="goal-desc">Host structured mini-delegations (potato farmers, youth, women) to meet the candidate.</div>
-            <div class="goal-kpi">KPI: 3 delegations/week (12 in M2)</div>
+
+          <div class="task-card">
+            <div class="task-title">Structured Village Delegations</div>
+            <div class="task-desc">Host 3 weekly delegations at the front office (potato farmers, youth riders, women groups) for candidate strategy talks.</div>
+            <div class="task-kpi">KPI: 12 delegations hosted (~120 leaders)</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Voter CRM Expansion</div>
-            <div class="goal-desc">Capture verified voter phone numbers tagged to specific polling centers.</div>
-            <div class="goal-kpi">KPI: 1,500 verified voter numbers</div>
+
+          <div class="task-card">
+            <div class="task-title">Voter Contact CRM Expansion</div>
+            <div class="task-desc">Log voter phone numbers categorized by polling center from ground engagements and visits.</div>
+            <div class="task-kpi">KPI: 1,500 verified voter numbers</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Collateral Distribution Desk</div>
-            <div class="goal-desc">Track and distribute branded reflector jackets, fliers, and merchandise with signed sheets.</div>
-            <div class="goal-kpi">KPI: 500+ boda jackets distributed</div>
+
+          <div class="task-card">
+            <div class="task-title">Campaign Collateral Control Desk</div>
+            <div class="task-desc">Inventory distribution of branded reflector jackets, badges, and flyers with signed accountability logs.</div>
+            <div class="task-kpi">KPI: 500+ boda jackets distributed</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">100-Bob Monthly Club</div>
-            <div class="goal-desc">Mobilize regular monthly micro-contributions from grassroots & diaspora supporters via Paybill.</div>
-            <div class="goal-kpi">KPI: 200+ monthly donors</div>
+
+          <div class="task-card">
+            <div class="task-title">100-Bob Monthly Grassroots Club</div>
+            <div class="task-desc">Mobilize small regular contributions from diaspora Kipipiri professionals and local supporters.</div>
+            <div class="task-kpi">KPI: 200+ monthly subscribers</div>
           </div>
         </div>
 
         <!-- MONTH 3 -->
-        <div class="sprint-col">
-          <div class="sprint-header">
-            <div class="sprint-title">Month 3 (Days 61–90)</div>
-            <div class="sprint-badge">Dominance & Audit</div>
+        <div class="roadmap-col">
+          <div class="col-header">
+            <h3>Month 3: Days 61–90</h3>
+            <span class="pill">Dominance & Audit</span>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Polling Station Agents Mapping</div>
-            <div class="goal-desc">Recruit and vet 2 agents per stream (1 man/youth, 1 woman) across all 35 streams.</div>
-            <div class="goal-kpi">KPI: 70 vetted agents on file</div>
+
+          <div class="task-card">
+            <div class="task-title">Polling Station Agents Recruitment</div>
+            <div class="task-desc">Identify and vet 2 agents per stream (1 woman, 1 man/youth) across all 35 streams.</div>
+            <div class="task-kpi">KPI: 70 vetted agents on file</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Voter Database Milestone</div>
-            <div class="goal-desc">Ramp up direct contacts from ground meetings into the master voter CRM.</div>
-            <div class="goal-kpi">KPI: 3,000+ registered contacts</div>
+
+          <div class="task-card">
+            <div class="task-title">Voter CRM Milestone: 3,000+</div>
+            <div class="task-desc">Reach the critical mass of direct registered voter contacts across all 22 polling centers.</div>
+            <div class="task-kpi">KPI: 3,000+ registered contacts</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Segmented Bulk SMS Blast</div>
-            <div class="goal-desc">Dispatch targeted mobile SMS to farmers, youth, and women across Wanjohi.</div>
-            <div class="goal-kpi">KPI: 95%+ delivery across 3,000 voters</div>
+
+          <div class="task-card">
+            <div class="task-title">Segmented Bulk SMS Broadcast</div>
+            <div class="task-desc">Dispatch targeted mobile SMS to farmers, youth, and women across Wanjohi.</div>
+            <div class="task-kpi">KPI: 95%+ delivery across 3,000 voters</div>
           </div>
-          <div class="goal-item">
-            <div class="goal-name">Quarterly Audit & Q2 Plan</div>
-            <div class="goal-desc">Full reconciliation of funds vs ground expenditures; sign off on Q2 Strategy with Nancy.</div>
-            <div class="goal-kpi">KPI: 100% reconciled accounts</div>
+
+          <div class="task-card">
+            <div class="task-title">Quarterly Audit & Q2 Plan</div>
+            <div class="task-desc">Comprehensive reconciliation of funds raised vs field expenditures; strategy sign-off with Nancy.</div>
+            <div class="task-kpi">KPI: 100% reconciled accounts</div>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p><strong>Campaign of Nancy Wamaitha Njenga</strong> • Candidate for MCA Wanjohi Ward, Kipipiri Constituency, Nyandarua County</p>
-    <p style="margin-top: 0.25rem;">Repository: <a href="https://github.com/KimJon/MCA-Wamaitha" target="_blank">KimJon/MCA-Wamaitha</a> | Built for Grassroots Operations & Presentation</p>
-  </footer>
-
-  <!-- JAVASCRIPT LOGIC -->
+  <!-- SCRIPT -->
   <script>
-    // Polling Centers Dataset
-    const pollingCenters = [
+    const centersData = [
       { id: 1, name: "WANJOHI PRIMARY SCHOOL", voters: 2325, streams: 4, target: 1200, tier: 1 },
       { id: 2, name: "NG'ARUA-RIRONI PRIMARY SCHOOL", voters: 1892, streams: 3, target: 950, tier: 1 },
       { id: 3, name: "NDEMI PRIMARY SCHOOL", voters: 1361, streams: 2, target: 650, tier: 1 },
@@ -1047,100 +988,89 @@
       { id: 22, name: "KIGOGO PRIMARY SCHOOL", voters: 41, streams: 1, target: 20, tier: 3 }
     ];
 
-    const totalWardVoters = 17474;
-    let currentTierFilter = 'all';
+    const totalVoters = 17474;
+    let selectedTier = 'all';
 
-    // Populate Table
-    function renderTable() {
+    function renderPollingTable() {
       const tbody = document.getElementById('pollingTableBody');
-      const searchVal = document.getElementById('searchInput').value.toLowerCase();
+      const query = document.getElementById('filterInput').value.toLowerCase();
       tbody.innerHTML = '';
 
-      const filtered = pollingCenters.filter(c => {
-        const matchesTier = (currentTierFilter === 'all') || (c.tier.toString() === currentTierFilter);
-        const matchesSearch = c.name.toLowerCase().includes(searchVal);
-        return matchesTier && matchesSearch;
+      const filtered = centersData.filter(c => {
+        const matchesTier = (selectedTier === 'all') || (c.tier.toString() === selectedTier);
+        const matchesQuery = c.name.toLowerCase().includes(query);
+        return matchesTier && matchesQuery;
       });
 
       filtered.forEach(c => {
-        const pct = ((c.voters / totalWardVoters) * 100).toFixed(1);
+        const share = ((c.voters / totalVoters) * 100).toFixed(1);
         const agents = c.streams * 2;
-        const tierClass = `tier-${c.tier}`;
-        const tierLabel = c.tier === 1 ? 'Tier 1 Mega' : (c.tier === 2 ? 'Tier 2 Mid' : 'Tier 3 Perimeter');
+        const tierBadge = c.tier === 1 ? 'Tier 1 Mega' : (c.tier === 2 ? 'Tier 2 Mid' : 'Tier 3 Perimeter');
 
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
+        const row = document.createElement('tr');
+        row.innerHTML = `
           <td>${c.id}</td>
           <td><strong>${c.name}</strong></td>
           <td><strong>${c.voters.toLocaleString()}</strong></td>
-          <td>${pct}%</td>
+          <td>${share}%</td>
           <td>${c.streams} stream${c.streams > 1 ? 's' : ''}</td>
-          <td style="color: var(--accent); font-weight: 700;">${c.target.toLocaleString()}</td>
+          <td style="color: var(--gold); font-weight: 700;">${c.target.toLocaleString()}</td>
           <td>${agents} agents</td>
-          <td><span class="tier-badge ${tierClass}">${tierLabel}</span></td>
+          <td><span class="badge-tier tier-${c.tier}">${tierBadge}</span></td>
         `;
-        tbody.appendChild(tr);
+        tbody.appendChild(row);
       });
     }
 
-    function filterTable() {
-      renderTable();
+    function updateTable() {
+      renderPollingTable();
     }
 
-    function setTierFilter(tier) {
-      currentTierFilter = tier;
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    function applyTierFilter(tier) {
+      selectedTier = tier;
+      document.querySelectorAll('.filter-chip').forEach(el => el.classList.remove('active'));
       event.target.classList.add('active');
-      renderTable();
+      renderPollingTable();
     }
 
-    // View Switching
-    function switchView(viewName) {
-      document.querySelectorAll('.view-section').forEach(sec => sec.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    function navigate(pane) {
+      document.querySelectorAll('.view-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.pill-btn').forEach(el => el.classList.remove('active'));
 
-      document.getElementById(`view-${viewName}`).classList.add('active');
+      document.getElementById(`pane-${pane}`).classList.add('active');
       event.target.classList.add('active');
     }
 
-    // Presentation Slide Logic
+    // SLIDE DECK LOGIC
     let currentSlide = 1;
     const totalSlides = 9;
 
-    function updateSlideDisplay() {
-      document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
-      const activeSlide = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
-      if (activeSlide) activeSlide.classList.add('active');
+    function refreshSlide() {
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      const active = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
+      if (active) active.classList.add('active');
 
-      document.getElementById('currentSlideNum').innerText = currentSlide;
-      document.getElementById('totalSlidesNum').innerText = totalSlides;
-
+      document.getElementById('currentNum').innerText = currentSlide;
+      document.getElementById('totalNum').innerText = totalSlides;
       document.getElementById('prevBtn').disabled = (currentSlide === 1);
       document.getElementById('nextBtn').disabled = (currentSlide === totalSlides);
     }
 
-    function changeSlide(direction) {
-      currentSlide += direction;
+    function moveSlide(step) {
+      currentSlide += step;
       if (currentSlide < 1) currentSlide = 1;
       if (currentSlide > totalSlides) currentSlide = totalSlides;
-      updateSlideDisplay();
+      refreshSlide();
     }
 
-    // Keyboard navigation for presentation
     document.addEventListener('keydown', (e) => {
-      const presActive = document.getElementById('view-presentation').classList.contains('active');
-      if (!presActive) return;
-
-      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
-        changeSlide(1);
-      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
-        changeSlide(-1);
-      }
+      if (!document.getElementById('pane-deck').classList.contains('active')) return;
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') moveSlide(1);
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') moveSlide(-1);
     });
 
-    // Initial render
-    renderTable();
-    updateSlideDisplay();
+    renderPollingTable();
+    refreshSlide();
   </script>
 </body>
 </html>
