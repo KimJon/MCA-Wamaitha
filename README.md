@@ -1,38 +1,38 @@
 # 🌾 Campaign of Nancy Wamaitha Njenga
 ## Member of County Assembly (MCA), Wanjohi Ward
-### Kipipiri Constituency | Nyandarua County, Kenya
+### Eldest Daughter of the Gituro / Gitua Family | Kipipiri Constituency | Nyandarua County, Kenya
 
-> **"Simama na Wamaitha: Mwĩhoko wa Wanjohi — Kazi, Haki na Maendeleo"**
-
----
-
-## 📽️ Interactive Presentation & Strategy Dashboard
-
-This repository contains an interactive presentation and data dashboard:
-
-* **[Live Interactive Dashboard & Presentation (`index.html`)](index.html):** Open directly in any web browser to access:
-  * **Presentation Mode:** 9-slide executive deck with keyboard navigation (Arrow keys / Spacebar) covering brand positioning, launch dinner, pillars, electoral mathematics, and frontline defense.
-  * **Polling Centers Explorer:** Real-time searchable database of all 22 Polling Centers (17,474 registered voters, 35 streams) with tier filters and target win calculations.
-  * **Front Office 90-Day Sprint Tracker:** Micro-goals, KPIs, and daily routines for campaign operations.
+> **"Simama na Wamaitha: Mũirĩtu Mũkũrũ wa Gituro, Mjasiri wa Wanjohi — Kazi, Haki na Rasilimali"**
 
 ---
 
-## 📁 Repository Strategy & Operational Documents
+## 📽️ Live Campaign Presentation & Operations Dashboard
+
+* **Live Interactive Deck & Financial Dashboard:** [https://kimjon.github.io/MCA-Wamaitha/](https://kimjon.github.io/MCA-Wamaitha/)  
+*(Or open locally: [`index.html`](index.html))*
+
+The web platform features:
+1. **Presentation Mode (9 Slides):** Grounded narrative covering the Gituro family roots, Eldest Daughter mandate, Kamau Kihara legacy, Mjasiri archetype, local crises (quarries, zero milk coolants, dying boda bodas, broken roads), confirmed launch pledges, and the 70-agent defense grid.
+2. **Pledges & Operations Budget:** Live tracking of confirmed commitments (Joe's Family KES 40k/mo, Strategist & Dad KES 40k, Mwaura Family KES 10k, Ward Ag Officer Upper Wanjohi tour, Milla's Dad Mama Mboga umbrellas, 200 posters, Pastor Gitonga, Purity) alongside forward procurement requirements (stickers, calendars, matatus, church treats).
+3. **Electoral Centers Explorer:** All 22 Polling Centers (17,474 registered voters, 35 streams) with target win votes and agent allocations.
+
+---
+
+## 📁 Campaign Strategic & Operational Documents
 
 | Document | Focus & Description |
 | :--- | :--- |
-| **[`1_CAMPAIGN_BRAND_STRATEGY.md`](1_CAMPAIGN_BRAND_STRATEGY.md)** | The cultural and political power of the name **"Wamaitha"**, slogans in Swahili and Kikuyu, and the 5 Wanjohi Ward Policy Pillars. |
-| **[`2_FUNDRAISING_DINNER_PROGRAM_AND_CONCEPT.md`](2_FUNDRAISING_DINNER_PROGRAM_AND_CONCEPT.md)** | Campaign launch dinner blueprint: Patron tiers (Platinum, Gold, Silver), donor mechanics, and event execution. |
-| **[`3_KEYNOTE_LAUNCH_SPEECH_WAMAITHA.md`](3_KEYNOTE_LAUNCH_SPEECH_WAMAITHA.md)** | Full keynote speech for Nancy Wamaitha Njenga with delivery guidance and emotional grassroots appeals. |
-| **[`4_FUNDRAISING_PLEDGE_KIT_AND_INVITATIONS.md`](4_FUNDRAISING_PLEDGE_KIT_AND_INVITATIONS.md)** | Printable pledge cards, WhatsApp/SMS broadcast templates, donor follow-up scripts, and financial ledger layout. |
-| **[`5_WANJOHI_WARD_WINNING_ROADMAP.md`](5_WANJOHI_WARD_WINNING_ROADMAP.md)** | 3-Phase strategic campaign pathway from brand anchor to ground dominance and Election Day defense. |
-| **[`MODERATOR_TALKING_POINTS_AND_GRASSROOTS_DOSSIER.md`](MODERATOR_TALKING_POINTS_AND_GRASSROOTS_DOSSIER.md)** | Moderator playbook with multiple angles to emphasize: potato farming, dairy, feeder roads, transparent bursaries, youth boda boda, and crowd engagement lines. |
-| **[`FRONT_OFFICE_3_MONTH_MICRO_GOALS.md`](FRONT_OFFICE_3_MONTH_MICRO_GOALS.md)** | Quarterly operational sprint: Measurable KPIs for pledge conversion, constituent visitor logging, voter CRM growth, and daily 8-to-6 routines. |
-| **[`WANJOHI_WARD_ELECTORAL_MATH_AND_POLLING_STRATEGY.md`](WANJOHI_WARD_ELECTORAL_MATH_AND_POLLING_STRATEGY.md)** | Deep electoral census of Wanjohi Ward (17,474 voters, 35 streams) with the **6,200 votes "Magic Number"** and 4 geographic operational clusters. |
+| **[`FRONT_OFFICE_BUDGET_AND_PLEDGE_LEDGER.md`](FRONT_OFFICE_BUDGET_AND_PLEDGE_LEDGER.md)** | **Financial Ledger:** Confirmed launch pledges, forward procurement bills (stickers, calendars, matatu branding), weekly running costs, and the 3 signature grassroots initiatives. |
+| **[`1_CAMPAIGN_BRAND_STRATEGY.md`](1_CAMPAIGN_BRAND_STRATEGY.md)** | **Brand & Character:** The Gituro/Gitua lineage, Eldest Daughter (*Mũirĩtu Mũkũrũ*), Kamau Kihara legacy, Mjasiri archetype, and policy pillars. |
+| **[`3_KEYNOTE_LAUNCH_SPEECH_WAMAITHA.md`](3_KEYNOTE_LAUNCH_SPEECH_WAMAITHA.md)** | **Candidate Keynote Speech:** Word-for-word emotional, courageous address tailored for Nancy Wamaitha Njenga. |
+| **[`MODERATOR_TALKING_POINTS_AND_GRASSROOTS_DOSSIER.md`](MODERATOR_TALKING_POINTS_AND_GRASSROOTS_DOSSIER.md)** | **Moderator Playbook:** Heritage framing, ground crises to emphasize, live pledge shout-outs, targeted floor asks, and climax candidate introduction. |
+| **[`WANJOHI_WARD_ELECTORAL_MATH_AND_POLLING_STRATEGY.md`](WANJOHI_WARD_ELECTORAL_MATH_AND_POLLING_STRATEGY.md)** | **Electoral Intelligence:** The 6,200 "Magic Number", 80/20 tier breakdown, and 4 geographic operational clusters. |
+| **[`FRONT_OFFICE_3_MONTH_MICRO_GOALS.md`](FRONT_OFFICE_3_MONTH_MICRO_GOALS.md)** | **Front Office Operations:** 90-day quarterly sprint with measurable micro-goals, KPIs, and daily 8-to-6 routines. |
+| **[`4_FUNDRAISING_PLEDGE_KIT_AND_INVITATIONS.md`](4_FUNDRAISING_PLEDGE_KIT_AND_INVITATIONS.md)** | **Donation Collateral:** Printable pledge cards, WhatsApp/SMS broadcast templates, and follow-up scripts. |
 
 ---
 
-## 🗳️ Wanjohi Ward Electoral Summary (Official IEBC Data)
+## 🗳️ Wanjohi Ward Electoral Summary (IEBC Official Data)
 
 * **Total Registered Voters:** 17,474
 * **Total Polling Centers:** 22
@@ -48,16 +48,4 @@ This repository contains an interactive presentation and data dashboard:
 6. **Gitei Primary School:** 1,006 voters (2 streams) — Win Target: 480 votes
 
 ---
-
-## 🚀 How to Run the Presentation
-
-1. Clone or download this repository:
-   ```bash
-   git clone https://github.com/KimJon/MCA-Wamaitha.git
-   ```
-2. Double-click `index.html` to open in Google Chrome, Microsoft Edge, or Safari.
-3. Use the top navigation to switch between **Presentation Mode**, **Polling Data & Math**, and the **Front Office 90-Day Plan**.
-4. In Presentation Mode, use your keyboard's **Left/Right Arrow keys** or **Spacebar** to advance through slides.
-
----
-*Campaign Secretariat of Nancy Wamaitha Njenga • Kipipiri Constituency, Nyandarua County, Kenya.*
+*Campaign Secretariat of Nancy Wamaitha Njenga • Wanjohi Ward, Kipipiri Constituency, Nyandarua County.*
